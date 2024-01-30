@@ -1,0 +1,12 @@
+/* card-container.component.css */
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.example-card {
+  width: 40%;
+}
+

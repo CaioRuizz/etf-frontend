@@ -1,0 +1,35 @@
+/* footer.component.css */
+
+.footer {
+  background-color: #f8f8f8;
+  padding: 10px 0;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.contact-info {
+  margin-top: 5px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-info li {
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+.mat-icon {
+  margin-right: 5px;
+}
+
+a {
+  color: black;
+}
