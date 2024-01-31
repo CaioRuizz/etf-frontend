@@ -24,8 +24,10 @@ export class HeaderComponent {
   async openDialog() {
     try {
       await navigator.share(this.shareData);
-    } catch (e) {
-      this.dialog.open(ShareSocialMediaDialogComponent);
+    } catch (e: any) {
+      if (e.name !== 'AbortError') {
+        this.dialog.open(ShareSocialMediaDialogComponent);
+      }
     }
   }
 }

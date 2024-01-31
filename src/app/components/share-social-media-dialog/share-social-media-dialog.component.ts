@@ -15,6 +15,5 @@ export class ShareSocialMediaDialogComponent {
   }
 
   protected readonly window = window;
-  protected readonly navigator = navigator;
 }
 
