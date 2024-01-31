@@ -1,7 +1,7 @@
 /* card-container.component.css */
 
 .container {
-  padding-bottom: 15%;
+  padding-bottom: 7%;
   overflow-y: auto; /* Adicionado para permitir rolagem vertical */
 }
 
@@ -66,5 +66,9 @@
     max-width: 100%; /* Alterado para ocupar 100% da largura disponível em telas menores */
     min-width: auto;
     margin-right: 0; /* Removido o espaço entre as tabelas em telas menores */
+  }
+
+  .container {
+    padding-bottom: 23%;
   }
 }
