@@ -1,0 +1,18 @@
+<div style="margin: 10px; overflow-y: auto; max-height: 50vh">
+  <h2>{{ data.ticker }} Todos os Ativos</h2>
+  <table mat-table [dataSource]="data.holdings">
+
+    <ng-container matColumnDef="Ticker">
+      <th mat-header-cell *matHeaderCellDef> Ativo </th>
+      <td mat-cell *matCellDef="let element"> {{element.ticker}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Share">
+      <th mat-header-cell *matHeaderCellDef> Participacao </th>
+      <td mat-cell *matCellDef="let element"> {{element.share}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

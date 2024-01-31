@@ -1,13 +1,70 @@
 /* card-container.component.css */
 
-.card-container {
+.container {
+  height: 79vh;
+  overflow-y: auto; /* Adicionado para permitir rolagem vertical */
+}
+
+.search-container {
   display: flex;
   justify-content: space-around;
   margin: 20px;
-  width: 60%;
+  width: 90%;
   max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.card-container button {
+.search-container button {
   height: 50px;
+}
+
+.search-container mat-form-field {
+  width: 30%;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Mantido para permitir que as tabelas se ajustem quando necessário */
+  width: 100%;
+  max-width: 800px; /* Adicionado para limitar a largura do container */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.venn-card {
+  width: 40vw;
+  min-width: 400px;
+  height: 60vh;
+  max-height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-card {
+  width: calc(50% - 10px); /* Calcula 50% da largura disponível e subtrai 10px para o espaço entre as tabelas */
+  max-width: 400px; /* Adicionado para limitar a largura da tabela a 400 pixels */
+  min-height: 400px;
+  margin-bottom: 10px; /* Adicionado espaço entre as tabelas */
+}
+
+.table-card h2 {
+  margin: 5px;
+}
+
+/* Media query para telas menores */
+@media (max-width: 700px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .table-card {
+    width: 90%;
+    max-width: 100%; /* Alterado para ocupar 100% da largura disponível em telas menores */
+    min-width: auto;
+    margin-right: 0; /* Removido o espaço entre as tabelas em telas menores */
+  }
 }

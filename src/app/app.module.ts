@@ -17,13 +17,19 @@ import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {AsyncPipe} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import { HeaderComponent } from './components/header/header.component';
+import { VennChartComponent } from './components/venn-chart/venn-chart.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatDialogModule} from "@angular/material/dialog";
+import { AllSharesDialogComponent } from './components/all-shares-dialog/all-shares-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SobreposicaoComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    VennChartComponent,
+    AllSharesDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +47,8 @@ import { HeaderComponent } from './components/header/header.component';
     AsyncPipe,
     HttpClientModule,
     MatButtonModule,
+    MatTableModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
