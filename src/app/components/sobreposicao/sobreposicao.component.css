@@ -4,9 +4,10 @@
   display: flex;
   justify-content: space-around;
   margin: 20px;
+  width: 60%;
+  max-width: 800px;
 }
 
-.example-card {
-  width: 40%;
+.card-container button {
+  height: 50px;
 }
-

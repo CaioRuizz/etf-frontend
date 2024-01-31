@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
-import {FormControl} from "@angular/forms";
-import {map, Observable, startWith} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import {apiUrl} from "../../config";
+
+type Ticker = {
+  ticker: string,
+  type: string,
+}
 
 @Component({
   selector: 'app-sobreposicao',
@@ -13,29 +17,24 @@ export class SobreposicaoComponent {
   constructor(private httpClient: HttpClient) {
   }
 
+  etf1: string = '';
+  etf2: string = '';
 
-  myControl = new FormControl('');
   options: string[] = [];
-  filteredOptions!: Observable<string[]>;
-
+  optionsMap: any = {};
 
   ngOnInit() {
-    this.httpClient.get<string[]>("https://sgk6cc5a25.execute-api.sa-east-1.amazonaws.com/Prod/api/v1/etf/tickers").subscribe(r => {
+    this.httpClient.get<Ticker[]>(`${apiUrl}/api/v1/etf/tickers`).subscribe(r => {
       console.log(r);
-      this.options = r;
+      r.forEach(ticker => {
+        this.optionsMap[ticker.ticker] = ticker.type === 'Stock' ? 'Renda Variável' : 'Renda Fixa';
+      });
+      this.options = r.map(x => x.ticker);
     });
-
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value || '')),
-    );
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
+  calcular() {
 
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
-
 
 }

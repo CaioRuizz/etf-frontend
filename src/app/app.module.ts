@@ -42,6 +42,7 @@ import { HeaderComponent } from './components/header/header.component';
     ReactiveFormsModule,
     AsyncPipe,
     HttpClientModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
