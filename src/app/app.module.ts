@@ -21,6 +21,9 @@ import { VennChartComponent } from './components/venn-chart/venn-chart.component
 import {MatTableModule} from "@angular/material/table";
 import {MatDialogModule} from "@angular/material/dialog";
 import { AllSharesDialogComponent } from './components/all-shares-dialog/all-shares-dialog.component';
+import { ShareSocialMediaDialogComponent } from './components/share-social-media-dialog/share-social-media-dialog.component';
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {ClipboardModule} from "@angular/cdk/clipboard";
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { AllSharesDialogComponent } from './components/all-shares-dialog/all-sha
     FooterComponent,
     HeaderComponent,
     VennChartComponent,
-    AllSharesDialogComponent
+    AllSharesDialogComponent,
+    ShareSocialMediaDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +53,8 @@ import { AllSharesDialogComponent } from './components/all-shares-dialog/all-sha
     MatButtonModule,
     MatTableModule,
     MatDialogModule,
+    MatTooltipModule,
+    ClipboardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,9 @@
+<div class="share-container">
+  <h2> Compartilhar </h2>
+  <mat-form-field>
+    <input matInput disabled [value]="window.location.href">
+  </mat-form-field>
+  <button mat-icon-button [cdkCopyToClipboard]="window.location.href" [cdkCopyToClipboardAttempts]="5">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,9 @@
+.share-container {
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.share-container mat-form-field {
+    height: 60px;
+}
