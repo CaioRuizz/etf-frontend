@@ -24,6 +24,7 @@ import { AllSharesDialogComponent } from './components/all-shares-dialog/all-sha
 import { ShareSocialMediaDialogComponent } from './components/share-social-media-dialog/share-social-media-dialog.component';
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {ClipboardModule} from "@angular/cdk/clipboard";
+import { UpperCaseInputDirective } from './directives/upper-case-input.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {ClipboardModule} from "@angular/cdk/clipboard";
     HeaderComponent,
     VennChartComponent,
     AllSharesDialogComponent,
-    ShareSocialMediaDialogComponent
+    ShareSocialMediaDialogComponent,
+    UpperCaseInputDirective
   ],
   imports: [
     BrowserModule,

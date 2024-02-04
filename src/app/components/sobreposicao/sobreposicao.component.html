@@ -3,7 +3,7 @@
   <div class="search-container">
     <mat-form-field>
       <mat-label>ETF 1</mat-label>
-      <input matInput list="etf1" name="menace" [(ngModel)]="etf1">
+      <input matInput list="etf1" name="menace" toUppercase [(ngModel)]="etf1">
       <datalist id="etf1">
         <option *ngFor="let option of options">{{ option }} </option>
       </datalist>
@@ -12,7 +12,7 @@
 
     <mat-form-field>
       <mat-label>ETF 2</mat-label>
-      <input matInput list="etf2" name="menace" [(ngModel)]="etf2">
+      <input matInput list="etf2" name="menace" toUppercase [(ngModel)]="etf2">
       <datalist id="etf2">
         <option *ngFor="let option of options">{{ option }} </option>
       </datalist>
